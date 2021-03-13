@@ -2,7 +2,7 @@
 
 <details>
   <summary>
-    Fundamentos
+    <b> Fundamentos </b>
    </summary>
   
 - [2.1](exercices/2.1)
@@ -12,7 +12,7 @@
 
 <details>
   <summary>
-    <b size="100px"> Front-End </b>
+    <b> Front-End </b>
    </summary>
 
 </details>
@@ -20,7 +20,7 @@
 
 <details>
   <summary>
-    <b size="100px"> Back-End </b>
+    <b> Back-End </b>
    </summary>
 
 </details>
@@ -28,7 +28,7 @@
 
 <details>
   <summary>
-    <b size="100px"> Ciência da Computação </b>
+    <b> Ciência da Computação </b>
    </summary>
 
 </details>
