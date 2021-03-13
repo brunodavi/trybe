@@ -2,4 +2,4 @@
 Exercícios da Trybe
 
 ### Exercícios - Git GiHub
-- [2.1](/exercises/2.1)
+- [2.1](exercices/2.1)
