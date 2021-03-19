@@ -54,20 +54,25 @@ ol{
 
 .stack:hover {
   font-family: inherit;
+  color: orange;
 }
 
 .w3:hover {
   font-family: Verdana,sans-serif;
+  color: green;
 }
 
 .mdn:hover {
   font-family: zillaslab,palatino,"Palatino Linotype",serif;
+  color: black;
 }
 
 .dev:hover {
   font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  color: rgb(255, 208, 0);
 }
 
 .trybe:hover {
   font-family: "Verdana","Arial",'"Helvetica Neue"',"Helvetica","sans-serif";
+  color: #036b52;
 }
