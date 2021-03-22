@@ -2,6 +2,10 @@
         text-align: center;
         display: block;
     }
+
+    ul li {
+        display: inline;
+    }
     
     .first {
         background-color: rgb(235, 200, 84);
