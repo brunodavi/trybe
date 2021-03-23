@@ -1,0 +1,29 @@
+img {
+  width: 150px;
+  height: 100px;
+}
+
+div {
+  display: inline-block;
+  text-align: center;
+}
+
+iframe {
+  float: right;
+}
+
+nav {
+  background-color: darkgray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.tumb {
+  width: 300px;
+  height: 200px;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
