@@ -1,4 +1,4 @@
-img {
+div a img {
   width: 150px;
   height: 100px;
 }
@@ -10,6 +10,11 @@ div {
 
 iframe {
   float: right;
+}
+
+footer {
+  text-align: center;
+  background-color: darkgrey;
 }
 
 nav {
@@ -26,4 +31,8 @@ nav {
 .center {
   text-align: center;
   margin: auto;
+}
+
+.contact {
+  margin: 15px 10px;
 }
