@@ -8,7 +8,7 @@
    - [x] Unix, Bash e Shell
    - [x] Git, GiHub e Internet
    - [x] HTML & CSS
-   - [ ] JavaScript e Lógica de Programação
+   - [x] JavaScript e Lógica de Programação
    - [ ] JavaScript: DOM, Eventos e Web Storage
    - [ ] Forms, Flexbox e Responsivo
    - [ ] JavaScript ES6 e Testes Unitários
