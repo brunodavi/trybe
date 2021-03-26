@@ -72,3 +72,24 @@ for (let i = n - 1; i >= 0; i -= 1) {
 
   }
 }
+
+console.log();
+
+// 6
+let num = 0;
+
+for (let i = 1; i <= n; i += 1) {
+  if (i % 2 === 0) {
+    num += 1
+  }
+
+  if (num > 2) {
+    console.log('É um número primo');
+    break
+  }
+
+  if (num <= 2 && i === n) {
+    console.log('Não é um número primo');
+  }
+
+}
