@@ -1,4 +1,4 @@
-let n = 5;
+let n = 7;
 let s = '';
 let a = [];
 
@@ -38,7 +38,7 @@ for (let i = 0; i < n; i += 1) {
   s += '*'
 }
 
-// Desisti de usar apenas for vou ter que apelar
+// Desisti de usar apenas for, vou ter que apelar
 // usando regex
 
 for (let i = 0; i < n; i += 1) {
@@ -49,5 +49,26 @@ for (let i = 0; i < n; i += 1) {
 for (let i = n - 1; i >= 0; i -= 1) {
   if (a[i].match(/\*/g) !== null) {
     console.log(a[i]);
+  }
+}
+
+console.log();
+
+// 5 
+
+for (let i = n - 1; i >= 0; i -= 1) {
+  if (a[i].match(/\*/g) !== null) {
+
+    let count = a[i].match(/\*/g).length
+    let spaces = ''
+
+    if (count > 1 && count < n) {
+      for (let i = count - 2; i > 0; i -= 1) {
+        spaces += ' '
+      }
+    }
+
+    console.log(a[i].replace(/(\s\*)\*+(\*\s)/g, `$1${spaces}$2`));
+
   }
 }
