@@ -1,7 +1,3 @@
-const a = 5;
-const b = 8;
-const c = 13;
-
 function title(str) {
     console.log(`\n\n${str}\n`);
 }
@@ -77,7 +73,7 @@ function numVal(a) {
 
 function angle(a, b, c) {
 
-  // Eu não sei fazer esse código de triangulo https://www.vivaolinux.com.br/script/Existencia-de-triangulo-em-Python-3
+    // Eu não sei fazer esse código de triangulo https://www.vivaolinux.com.br/script/Existencia-de-triangulo-em-Python-3
 
     title(`O ângulo do triangulo com ${a} ${b} ${c}`)
 
@@ -106,59 +102,67 @@ function angle(a, b, c) {
 
 
 function nameCheck(toy) {
-  toy = toy.toLowerCase()
-  title(toy)
+    toy = toy.toLowerCase()
+    title(toy)
 
-  switch(toy) {
-    case('king'):
-    console.log('square')
-    return 'square';
+    switch (toy) {
+        case ('king'):
+            console.log('square')
+            return 'square';
 
-    case('queen'):
-    console.log('star')
-    return 'star'
+        case ('queen'):
+            console.log('star')
+            return 'star'
 
-    case('rook'):
-    console.log('cross')
-    return 'cross'
+        case ('rook'):
+            console.log('cross')
+            return 'cross'
 
-    case('bishop'):
-    console.log('diagonal')
-    return 'diagonal'
+        case ('bishop'):
+            console.log('diagonal')
+            return 'diagonal'
 
-    case('knight'):
-    console.log('L')
-    return 'L'
+        case ('knight'):
+            console.log('L')
+            return 'L'
 
-    case('pawn'):
-    console.log('front')
-    return 'front'
-  }
+        case ('pawn'):
+            console.log('front')
+            return 'front'
+    }
 }
 
 function fromAF(note, percent) {
-  title(`Troca da ${note} para ${percent}%`)
-  pct = note / 100 * percent
+    title(`Troca da ${note} para ${percent}%`)
+    pct = note / 100 * percent
 
-  if (pct >= 90) {
-    return 'A'
-  }
-  else if (pct >= 80) {
-    return 'B'
-  }
-  else if (pct >= 70) {
-    return 'C'
-  }
-  else if (pct >= 60) {
-    return 'D'
-  }
-  else if (pct >= 50) {
-    return 'E'
-  }
-  else if (pct < 50) {
-    return 'F'
-  }
-  else {
-    return 'error'
-  }
+    if (pct >= 90) {
+        return 'A'
+    } else if (pct >= 80) {
+        return 'B'
+    } else if (pct >= 70) {
+        return 'C'
+    } else if (pct >= 60) {
+        return 'D'
+    } else if (pct >= 50) {
+        return 'E'
+    } else if (pct < 50) {
+        return 'F'
+    } else {
+        return 'error'
+    }
+}
+
+function isPair(a, b, c) {
+    function m(val) {
+        return val % 2
+    }
+    return m(a) === 0 || m(b) === 0 || m(c) === 0
+}
+
+function isOdd(a, b, c) {
+    function m(val) {
+        return val % 2
+    }
+    return m(a) !== 0 || m(b) !== 0 || m(c) !== 0
 }
