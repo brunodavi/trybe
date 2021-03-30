@@ -99,7 +99,7 @@ function checkEnd(start, end) {
 }
 
 
-// 8 - Converter números romanos em números na array
+// 8 - Converter números romanos em números da array
 
 function ronum(arr) {
   let ron = {
@@ -149,5 +149,42 @@ return arr
 
 }
 
-let arr = ronum(['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CM', 'M'])
+let arr = ronum(['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CM', 'MMMCMXCIX'])
 console.log(arr);
+
+
+// https://stackoverflow.com/questions/9083037/convert-a-number-into-a-roman-numeral-in-javascript
+
+function romanize(int) {
+  let roman = '';
+
+  roman +=  'M'.repeat(int / 1000);  int %= 1000; 
+  roman += 'CM'.repeat(int / 900);   int %= 900; 
+  roman +=  'D'.repeat(int / 500);   int %= 500;  
+  roman += 'CD'.repeat(int / 400);   int %= 400;
+  roman +=  'C'.repeat(int / 100);   int %= 100;
+  roman += 'XC'.repeat(int / 90);    int %= 90;
+  roman +=  'L'.repeat(int / 50);    int %= 50;
+  roman += 'XL'.repeat(int / 40);    int %= 40;
+  roman +=  'X'.repeat(int / 10);    int %= 10;
+  roman += 'IX'.repeat(int / 9);     int %= 9;
+  roman +=  'V'.repeat(int / 5);     int %= 5;
+  roman += 'IV'.repeat(int / 4);     int %= 4;
+  roman +=  'I'.repeat(int);
+
+  return roman;
+}
+
+function deromanize(roman) {
+  var r = 0;
+  // regular expressions to check if valid Roman Number.
+  if (!/^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/.test(roman))
+    throw new Error('Invalid Roman Numeral.');
+
+  roman.replace(/[MDLV]|C[MD]?|X[CL]?|I[XV]?/g, function(i) {
+    r += {M:1000, CM:900, D:500, CD:400, C:100, XC:90, L:50, XL:40, X:10, IX:9, V:5, IV:4, I:1}[i]; 
+  });
+
+  return r;
+}
+
