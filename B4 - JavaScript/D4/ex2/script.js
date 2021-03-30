@@ -61,8 +61,7 @@ function intRepeat(arr) {
   for (n of arr) {
     if (objRepeater[`${n}`] === undefined) {
       objRepeater[`${n}`] = 1
-    }
-    else {
+    } else {
       objRepeater[`${n}`] += 1
     }
   }
@@ -89,7 +88,7 @@ function addUp(N) {
   }
 
   return add
-} 
+}
 
 
 // 7 - Verifique se end é equivalente ao final de start
@@ -99,5 +98,56 @@ function checkEnd(start, end) {
   return start.match(re) !== null
 }
 
-let b = checkEnd('trybe', 'try')
-console.log(b);
+
+// 8 - Converter números romanos em números na array
+
+function ronum(arr) {
+  let ron = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000
+  }
+
+  for (i in arr) {
+    for (key in ron) {
+      arr[i] = eval(`'${arr[i]}'.replace(/${key}/g, '${ron[key]}')`)
+    }
+
+    function int(str) {
+      return parseInt(str)
+    }
+
+    let mt = arr[i].match(/[15]0*/g)
+    let n = 0
+
+    for (let i = 0; i < mt.length; i += 1) {
+      if (mt[i+1] !== undefined) {
+
+        if (int(mt[i]) >= int(mt[i+1])) {
+          n += int(mt[i])
+        }
+
+        else {
+          n -= int(mt[i])
+        }
+
+      }
+      else {
+        n += int(mt[i])
+      }
+    }
+
+    arr[i] = n
+
+  }
+
+return arr
+
+}
+
+let arr = ronum(['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CM', 'M'])
+console.log(arr);
