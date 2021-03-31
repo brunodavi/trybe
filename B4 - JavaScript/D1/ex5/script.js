@@ -91,10 +91,10 @@ function angle(a, b, c) {
         console.log("Triangulo equilátero.")
         return true
     } else if (a == b || b == c || c == a) {
-        print("Triangulo isósceles.")
+        console.log("Triangulo isósceles.")
         return true
     } else {
-        print("Triangulo escaleno.")
+        console.log("Triangulo escaleno.")
         return true
     }
 
