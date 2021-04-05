@@ -7,8 +7,15 @@
     <p id="second-paragraph">Segundo parágrafo!</p>
 
     <script>
-      var paragraph = document.getElementById("paragraph");
-      paragraph.style.color = "blue";
+      function getId(str) {
+        return document.getElementById(str)
+      }
+
+      getId("paragraph").style.color = 'red';
+      getId("second-paragraph").innerHTML = '<h1>grande?</h1>';
+      getId('page-title').innerText = 'Os Intocáveis';
+      getId('subtitle').innerHTML = '<h6>PEQUENO?</h6>';
+
     </script>
   </body>
 </html>
