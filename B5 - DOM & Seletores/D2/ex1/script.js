@@ -22,3 +22,25 @@ a.nextElementSibling;
 
 // 8 - Agora acesse o terceiroFilho a partir de pai.
 b.children[2];
+
+// 9 - Crie um irmão para elementoOndeVoceEsta.
+function createTag(tag, text='') {
+  let element = document.createElement(tag);
+  element.innerText = text;
+  return element;
+}
+
+b.appendChild(createTag('em', 'irmão'));
+
+// 10 - Crie um filho para elementoOndeVoceEsta
+a.appendChild(createTag('b', 'pai'));
+
+// 11 - Crie um filho para primeiroFilhoDoFilho.
+a.firstElementChild.appendChild(createTag('sub', 'filhoDoFilho'));
+
+// 12 - A partir desse filho criado, acesse terceiroFilho.
+b.children[2].appendChild(createTag('sup', 'terceiro'));
+
+// 13 - Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho.
+document.body.firstElementChild.remove()
+document.body.appendChild(b);
