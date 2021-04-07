@@ -9,7 +9,7 @@
    - [x] Git, GiHub e Internet
    - [x] HTML & CSS
    - [x] JavaScript e Lógica de Programação
-   - [ ] JavaScript: DOM, Eventos e Web Storage
+   - [x] JavaScript: DOM, Eventos e Web Storage
    - [ ] Forms, Flexbox e Responsivo
    - [ ] JavaScript ES6 e Testes Unitários
    - [ ] Higher Order Functions do JavaScript ES6
