@@ -57,4 +57,3 @@ listDatas(localStorage, listLocal, 'local');
 
 inputSession.addEventListener('keypress', addListEvent);
 listDatas(sessionStorage, listSession, 'session');
-
