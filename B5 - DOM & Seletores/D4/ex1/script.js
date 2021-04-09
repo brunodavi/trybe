@@ -18,13 +18,10 @@ function updateStorage() {
 
 function eventInput(e) {
   let input = e.target
-  console.log(input);
-  if (input.tagName === 'INPUT') {
-    let id = input.id
-    let val = input.value;
-    localStorage[id] = val;
-    updateStorage();
-  }
+  let id = input.id
+  let val = input.value;
+  localStorage[id] = val;
+  updateStorage();
 }
 
 config.addEventListener('change', eventInput);
