@@ -9,10 +9,10 @@
 </head>
 <body>
   <form method="GET">
-    <input type="email" name="email" placeholder="Email" autocomplete="off" pattern="^[A-Z_a-z.0-9]+@.{2,10}\.com(\..{2})?$" required>
+    <input type="email" name="email" placeholder="Email" autocomplete="off" pattern="^[A-Z_a-z.0-9]+@.{2,10}\.com(\..{2})?$" autofocus required>
     <input type="password" name="pass" placeholder="Senha" pattern="^.{8}$" required>
-    <label for="remenber">
-      <input type="checkbox" id="remenber">Lembrar-se
+    <label for="remember">
+      <input type="checkbox" id="remember" value="true" name="remember">Lembrar-se
     </label>
     <input type="submit" value="Entrar">
   </form>
