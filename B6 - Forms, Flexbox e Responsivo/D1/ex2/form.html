@@ -6,34 +6,74 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <title>Currículo</title>
 </head>
 
 <body>
-  <fieldset>
-    <label>Nome
-      <input type="text" maxlength="40" required>
-    </label>
+  <form method="get">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+  
+      <label>Nome
+        <input type="text" name="name" maxlength="40" required>
+      </label>
+  
+      <label>Email
+        <input type="text" name="email" maxlength="50" required>
+      </label>
+  
+      <label>CPF
+        <input type="text" name="cpf" maxlength="11" required>
+      </label>
+  
+      <label>Endereço
+        <input type="text" name="address" maxlength="200" required>
+      </label>
+  
+      <label>Cidade
+        <input type="text" name="city" maxlength="28" required>
+      </label>
+  
+      <select name="states" id="states"></select>
+  
+      <label class="radio">
+        <input type="radio" name="home" checked>Casa
+      </label>
+      
+      <label class="radio">
+        <input type="radio" name="home">Apartamento
+      </label>
+  
+    </fieldset>
+  
+    <fieldset>
+      <legend>Último Emprego</legend>
+  
+      <label>Resumo
+        <textarea name="resume" maxlength="1000" required></textarea>
+      </label>
+  
+      <label>Profissão
+        <input type="text" name="work" maxlength="40" required>
+      </label>
+  
+      <label>Descrição
+        <input type="text" name="description" maxlength="500" required>
+      </label>
+  
+      <label>Data de Inicío
+        <input type="text" name="start" pattern="^[0-3]\d/[0-1]\d/[1-2]\d{3}$" maxlength="10" required>
+      </label>
+  
+    </fieldset>
 
-    <label>Email
-      <input type="text" maxlength="50" required>
-    </label>
+    <input type="submit">
+    <input type="reset" id="reset">
 
-    <label>CPF
-      <input type="text" maxlength="11" required>
-    </label>
+  </form>
 
-    <label>Endereço
-      <input type="text" maxlength="200" required>
-    </label>
-
-    <label>Cidade
-      <input type="text" maxlength="28" required>
-    </label>
-
-    <select name="states" id="states"></select>
-
-  </fieldset>
+  <div id="data"></div>
+  
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
