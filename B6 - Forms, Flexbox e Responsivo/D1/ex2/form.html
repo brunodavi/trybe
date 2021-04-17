@@ -14,61 +14,62 @@
     <fieldset>
       <legend>Dados Pessoais</legend>
   
-      <label>Nome
-        <input type="text" name="name" maxlength="40" required>
-      </label>
+      <label>Nome</label>
+      <div class="control">
+<input type="text" name="name" maxlength="40" required></div>
   
-      <label>Email
-        <input type="text" name="email" maxlength="50" required>
-      </label>
+      <label>Email</label>
+      <div class="control">
+<input type="text" name="email" maxlength="50" required></div>
   
-      <label>CPF
-        <input type="text" name="cpf" maxlength="11" required>
-      </label>
+      <label>CPF</label>
+      <div class="control">
+<input type="text" name="cpf" maxlength="11" required></div>
   
-      <label>Endereço
-        <input type="text" name="address" maxlength="200" required>
-      </label>
+      <label>Endereço</label>
+      <div class="control">
+<input type="text" name="address" maxlength="200" required></div>
   
-      <label>Cidade
-        <input type="text" name="city" maxlength="28" required>
-      </label>
+      <label>Cidade</label>
+      <div class="control">
+<input type="text" name="city" maxlength="28" required></div>
   
       <select name="states" id="states"></select>
   
       <label class="radio">
-        <input type="radio" name="home" checked>Casa
-      </label>
+      <div class="control">
+<input type="radio" name="home" checked></div>Casa
       
       <label class="radio">
-        <input type="radio" name="home">Apartamento
-      </label>
+      <div class="control">
+<input type="radio" name="home"></div>Apartamento
   
     </fieldset>
   
     <fieldset>
       <legend>Último Emprego</legend>
   
-      <label>Resumo
+      <label>Resumo</label>
         <textarea name="resume" maxlength="1000" required></textarea>
-      </label>
   
-      <label>Profissão
-        <input type="text" name="work" maxlength="40" required>
-      </label>
+      <label>Profissão</label>
+      <div class="control">
+<input type="text" name="work" maxlength="40" required></div>
   
-      <label>Descrição
-        <input type="text" name="description" maxlength="500" required>
-      </label>
+      <label>Descrição</label>
+      <div class="control">
+<input type="text" name="description" maxlength="500" required></div>
   
-      <label>Data de Inicío
-        <input type="text" name="start" pattern="^[0-3]\d/[0-1]\d/[1-2]\d{3}$" maxlength="10" required>
-      </label>
+      <label>Data de Inicío</label>
+      <div class="control">
+<input type="text" name="start" pattern="^[0-3]\d/[0-1]\d/[1-2]\d{3}$" maxlength="10" required></div>
   
     </fieldset>
 
-    <input type="submit">
-    <input type="reset" id="reset">
+  <div class="control">
+<input type="submit"></div>
+  <div class="control">
+<input type="reset" id="reset"></div>
 
   </form>
 

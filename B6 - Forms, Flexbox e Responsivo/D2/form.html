@@ -10,64 +10,108 @@
 </head>
 
 <body>
-  <form method="get">
-    <section>
-      <label>Nome
-        <input type="text" name="name" maxlength="40" required>
-      </label>
-  
-      <label>Email
-        <input type="text" name="email" maxlength="50" required>
-      </label>
-  
-      <label>CPF
-        <input type="text" name="cpf" maxlength="11" required>
-      </label>
-  
-      <label>Endereço
-        <input type="text" name="address" maxlength="200" required>
-      </label>
-  
-      <label>Cidade
-        <input type="text" name="city" maxlength="28" required>
-      </label>
-  
-      <select name="states" id="states"></select>
-  
-      <label class="radio">
-        <input type="radio" name="home" checked>Casa
-      </label>
-      
-      <label class="radio">
-        <input type="radio" name="home">Apartamento
-      </label>  
-    </section>
-    
-    <section>
-      <label>Resumo
-        <textarea name="resume" maxlength="1000" required></textarea>
-      </label>
-  
-      <label>Profissão
-        <input type="text" name="work" maxlength="40" required>
-      </label>
-  
-      <label>Descrição
-        <input type="text" name="description" maxlength="500" required>
-      </label>
-  
-      <label>Data de Inicío
-        <input type="text" name="start" pattern="^[0-3]\d/[0-1]\d/[1-2]\d{3}$" maxlength="10" required>
-      </label>
-    </section>
+  <form method="get" class="container">
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <input type="text" class="input" name="name" maxlength="40" placeholder="Jorge" required>
+      </div>
+    </div>
 
-    <input type="submit">
-    <input type="reset" id="reset">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input type="text" class="input" name="email" maxlength="50" placeholder="test@gmail.com" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">CPF</label>
+      <div class="control">
+        <input type="text" class="input" name="cpf" placeholder="111.111.111-22" minlength="11" maxlength="14"
+        pattern="^(\d\d\d\.\d\d\d\.\d\d\d-\d\d|\d{11})$" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Endereço</label>
+      <div class="control">
+        <input type="text" class="input" name="address" maxlength="200" placeholder="Tv. Primavera" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Cidade</label>
+      <div class="control">
+        <input type="text" class="input" name="city" maxlength="28" placeholder="Garulhos - SP" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <div class="select">
+          <select name="states" id="states">
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="radio" checked>
+          Casa
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio">
+          Apartamento
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Resumo</label>
+      <div class="control">
+        <textarea class="textarea has-fixed-size" placeholder="Trabalhava armazenando estoque..." name="resume"
+        maxlength="1000" required></textarea>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Profissão</label>
+      <div class="control">
+        <input type="text" class="input" name="work" maxlength="40" placeholder="Confeiteiro" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Descrição</label>
+      <div class="control">
+        <input type="text" class="input" name="description" maxlength="500" placeholder="Ajudava na manutenção de automóveis..." required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Data de Inicío</label>
+      <div class="control">
+        <input type="text" class="input" name="start" pattern="^[0-3]\d/[0-1]\d/[1-2]\d{3}$" placeholder="11/09/1988"
+        maxlength="10" required>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-success">Enviar</button>
+      </div>
+      <div class="control">
+        <button id="reset" class="button is-dark is-light">Limpar</button>
+      </div>
+    </div>
 
   </form>
 
-  <div id="data"></div>
-  
+  <div id="data" class="table container is-center"></div>
+
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
