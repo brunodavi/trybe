@@ -10,7 +10,7 @@
    - [x] HTML & CSS
    - [x] JavaScript e Lógica de Programação
    - [x] JavaScript: DOM, Eventos e Web Storage
-   - [ ] Forms, Flexbox e Responsivo
+   - [x] Forms, Flexbox e Responsivo
    - [ ] JavaScript ES6 e Testes Unitários
    - [ ] Higher Order Functions do JavaScript ES6
    - [ ] JavaScript Assíncrono e Promises
