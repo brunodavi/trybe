@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Currículo</title>
+</head>
+
+<body>
+  <form method="get">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+  
+      <label>Nome</label>
+      <div class="control">
+<input type="text" name="name" maxlength="40" required></div>
+  
+      <label>Email</label>
+      <div class="control">
+<input type="text" name="email" maxlength="50" required></div>
+  
+      <label>CPF</label>
+      <div class="control">
+<input type="text" name="cpf" maxlength="11" required></div>
+  
+      <label>Endereço</label>
+      <div class="control">
+<input type="text" name="address" maxlength="200" required></div>
+  
+      <label>Cidade</label>
+      <div class="control">
+<input type="text" name="city" maxlength="28" required></div>
+  
+      <select name="states" id="states"></select>
+  
+      <label class="radio">
+      <div class="control">
+<input type="radio" name="home" checked></div>Casa
+      
+      <label class="radio">
+      <div class="control">
+<input type="radio" name="home"></div>Apartamento
+  
+    </fieldset>
+  
+    <fieldset>
+      <legend>Último Emprego</legend>
+  
+      <label>Resumo</label>
+        <textarea name="resume" maxlength="1000" required></textarea>
+  
+      <label>Profissão</label>
+      <div class="control">
+<input type="text" name="work" maxlength="40" required></div>
+  
+      <label>Descrição</label>
+      <div class="control">
+<input type="text" name="description" maxlength="500" required></div>
+  
+      <label>Data de Inicío</label>
+      <div class="control">
+<input type="text" name="start" pattern="^[0-3]\d/[0-1]\d/[1-2]\d{3}$" maxlength="10" required></div>
+  
+    </fieldset>
+
+  <div class="control">
+<input type="submit"></div>
+  <div class="control">
+<input type="reset" id="reset"></div>
+
+  </form>
+
+  <div id="data"></div>
+  
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

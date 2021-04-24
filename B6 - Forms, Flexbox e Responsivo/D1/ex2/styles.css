@@ -1,0 +1,66 @@
+fieldset {
+  margin-top: 15px;
+}
+
+label, textarea {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 98%;
+  padding: 5px;
+}
+
+.radio {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+input[type="submit"], input[type="reset"] {
+  display: inline-block;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  font-size: 15px;
+  margin: 20px;
+}
+
+input[type="submit"] {
+  float: left;
+}
+
+input[type="reset"] {
+  float: right;
+}
+
+textarea {
+  width: 98%;
+  height: 200px;
+  resize: none;
+  padding: 5px;
+}
+
+table, th, td {
+  border: solid black 1px;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+table {
+  margin-top: 25px;
+  width: 100%;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.300);
+}
+
+td {
+  background-color: rgba(0, 0, 0, 0.150);
+}
+
