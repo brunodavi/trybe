@@ -11,7 +11,7 @@
    - [x] JavaScript e Lógica de Programação
    - [x] JavaScript: DOM, Eventos e Web Storage
    - [x] Forms, Flexbox e Responsivo
-   - [ ] JavaScript ES6 e Testes Unitários
+   - [x] JavaScript ES6 e Testes Unitários
    - [ ] Higher Order Functions do JavaScript ES6
    - [ ] JavaScript Assíncrono e Promises
    - [ ] Testes automatizados com Jest
