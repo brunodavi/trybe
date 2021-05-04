@@ -12,7 +12,7 @@
    - [x] JavaScript: DOM, Eventos e Web Storage
    - [x] Forms, Flexbox e Responsivo
    - [x] JavaScript ES6 e Testes Unitários
-   - [ ] Higher Order Functions do JavaScript ES6
+   - [x] Higher Order Functions do JavaScript ES6
    - [ ] JavaScript Assíncrono e Promises
    - [ ] Testes automatizados com Jest
 
