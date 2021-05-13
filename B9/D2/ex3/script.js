@@ -20,6 +20,6 @@ function func(resolve, error) {
 const promise = new Promise(func);
 
 promise
-.then(console.log)   // Mostra o que foi enviado como argumento --> 'Resolvido' 
-.then(console.log)   // Mostra o que foi enviado como argumento -->  undefined
-.catch(console.log); // Mostra o que foi enviado como argumento --> 'Erro'
+.then(console.log)   // Mostra o que foi enviado como argumento   --> 'Resolvido' 
+.then(console.log)   // Mostra o que foi retornado como argumento -->  undefined
+.catch(console.log); // Mostra o que foi enviado como argumento   --> 'Erro'
