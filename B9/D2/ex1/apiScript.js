@@ -1,9 +1,8 @@
-const fetch = require('node-fetch');
-
+// apiScript.js     
 const API_URL = 'https://icanhazdadjoke.com/';
-const h2 = document.getElementById("jokeContainer");
+const h2 = document.getElementById('jokeContainer');
 
-function fetchJoke() {
+const fetchJoke = () => {
   const myObject = {
     method: 'GET',
     headers: { 'Accept': 'application/json' }
@@ -11,8 +10,7 @@ function fetchJoke() {
 
   fetch(API_URL, myObject)
     .then(response => response.json())
-    .then(({ joke }) =>  h2.innerText = joke)
-}
+    .then(({ joke }) => {h2.innerText = joke});
+};
 
-fetchJoke();
-
+window.onload = () => fetchJoke();
