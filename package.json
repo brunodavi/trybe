@@ -8,6 +8,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@types/jest": "^26.0.23",
     "abab": "^2.0.5",
     "acorn": "^8.2.4",
     "acorn-globals": "^6.0.0",
