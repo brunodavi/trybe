@@ -14,7 +14,7 @@
    - [x] JavaScript ES6 e Testes Unitários
    - [x] Higher Order Functions do JavaScript ES6
    - [x] JavaScript Assíncrono e Promises
-   - [ ] Testes automatizados com Jest
+   - [x] Testes automatizados com Jest
 
 </details>
 
