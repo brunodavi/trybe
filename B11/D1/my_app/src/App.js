@@ -1,4 +1,4 @@
-// import Comment from './Component'
+import Component from './Component'
 // import logo from './logo.svg';
 import './App.css';
 
@@ -10,9 +10,7 @@ const Task = (value) => {
 
 function App() {
   return (
-    <ul>
-      {Task('Item 1')}
-    </ul>
+    <Component>{Task('Testing')}</Component>
   );
 }
 
