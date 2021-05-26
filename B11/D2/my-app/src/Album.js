@@ -1,5 +1,6 @@
 // /src/components/Album.js
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 class Album extends React.Component {
   render() {
@@ -17,6 +18,22 @@ class Album extends React.Component {
       </section>
     );
   }
+}
+
+Album.propTypes = {
+  album: PropTypes.exact({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    releaseDate: PropTypes.exact({
+      year: PropTypes.string.isRequired,
+      month: PropTypes.string.isRequired,
+      day: PropTypes.string.isRequired,
+    }),
+    others: PropTypes.exact({
+      recordCompany: PropTypes.string.isRequired,
+      formats: PropTypes.string.isRequired
+    }),
+  })
 }
 
 export default Album;

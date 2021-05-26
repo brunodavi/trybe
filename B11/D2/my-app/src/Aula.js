@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 class GreetingClass extends React.Component {
   render() {
@@ -13,6 +14,13 @@ function CreateName(first, last) {
     last
   }
 }
+
+GreetingClass.propTypes = {
+  name: PropTypes.exact({
+    first: PropTypes.string.isRequired,
+    last: PropTypes.string.isRequired
+  })
+};
 
 const Greeting = {
   GreetingClass,
