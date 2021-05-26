@@ -1,4 +1,4 @@
-// /src/components/Album.js
+// /src/Album.js
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -25,13 +25,13 @@ Album.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     releaseDate: PropTypes.exact({
-      year: PropTypes.string.isRequired,
-      month: PropTypes.string.isRequired,
-      day: PropTypes.string.isRequired,
+      year: PropTypes.string,
+      month: PropTypes.string,
+      day: PropTypes.string,
     }),
     others: PropTypes.exact({
-      recordCompany: PropTypes.string.isRequired,
-      formats: PropTypes.string.isRequired
+      recordCompany: PropTypes.string,
+      formats: PropTypes.string
     }),
   })
 }

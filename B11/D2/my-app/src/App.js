@@ -39,6 +39,7 @@ class App extends React.Component {
 
     return (
       <div>
+        <GreetingClass/>
         <GreetingClass name={CreateName('Lucas', 'Ferraz')}/>
         {albums.map(album => <Album album={album} />)}
       </div>

@@ -22,6 +22,13 @@ GreetingClass.propTypes = {
   })
 };
 
+GreetingClass.defaultProps = {
+  name: {
+    first: 'People',
+    last: 'Strange'
+  }
+}
+
 const Greeting = {
   GreetingClass,
   CreateName
