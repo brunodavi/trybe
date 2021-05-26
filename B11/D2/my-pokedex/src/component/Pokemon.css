@@ -1,0 +1,26 @@
+h3 {
+  text-align: center;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: solid rgba(0, 0, 0, 0.3) 1px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 150px;
+}
