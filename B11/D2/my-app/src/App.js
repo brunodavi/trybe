@@ -1,9 +1,9 @@
 // src/App.js
-import React from 'react';
-import Album from './Album'
+import React from 'react'
 import Aula from './Aula'
+import Album from './Album'
 
-const { GreetingClass, CreateName } = Aula
+const { GreetingClass, CreateName } = Aula;
 
 class App extends React.Component {
   render() {
@@ -35,16 +35,15 @@ class App extends React.Component {
       }
     };
 
+    const albums = [ album01, album02 ];
+
     return (
       <div>
-        <p>
-          <GreetingClass name={CreateName('Lucas', 'Gomes')} />
-        </p>
-        <Album album={ album01 } />
-        <Album album={ album02 } />
+        <GreetingClass name={CreateName('Lucas', 'Ferraz')}/>
+        {albums.map(album => <Album album={album} />)}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
