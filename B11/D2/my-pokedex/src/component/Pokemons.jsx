@@ -7,6 +7,7 @@ class Pokemons extends React.Component {
     super()
     this.pokeFilter = this.pokeFilter.bind(this)
     this.filterTypes = this.filterTypes.bind(this)
+    this.setType = this.setType.bind(this)
     this.state = {
       type: 'All'
     }
@@ -24,8 +25,9 @@ class Pokemons extends React.Component {
     }, [])
   }
 
-  setType() {
-    this.that.setState({ type: this.type })
+  setType(event) {
+    const val = event.target.innerText
+    this.setState({ type: val })
   }
 
   pokeFilter(type) {
@@ -55,9 +57,9 @@ class Pokemons extends React.Component {
     return (
       <div>
         <div className="buttons">
-        <button className="button" onClick={this.setType.bind({ type: 'All', that: this })}>All</button>
+        <button className="button" onClick={this.setType}>All</button>
         {this.filterTypes().map((type) => (
-          <button className="button" onClick={this.setType.bind({ type, that: this })}>{type}</button>
+          <button className="button" onClick={this.setType}>{type}</button>
         ))}
         </div>
         <div className="list">
