@@ -1,0 +1,16 @@
+.buttons {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: orangered;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border: none;
+}

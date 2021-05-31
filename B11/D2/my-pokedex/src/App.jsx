@@ -1,14 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
-import Pokemon from './component/Pokemon'
+import pokemons from './data'
+import Pokemons from './component/Pokemons'
 
 function App() {
   return (
     <div>
       <h1>PokeDex</h1>
-      <div className="list">
-        <Pokemon />
-      </div>
+      <Pokemons pokemons={pokemons} type="All" />
     </div>
   );
 }

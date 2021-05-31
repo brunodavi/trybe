@@ -2,12 +2,6 @@ h1 {
   text-align: center;
 }
 
-.list {
-  width: 100%;
-  display: flex;
-  overflow-x: scroll;
-}
-
 @media only screen and (max-width: 600px) {
   .list {
     flex-direction: column;
