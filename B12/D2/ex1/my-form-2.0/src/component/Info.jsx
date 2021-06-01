@@ -15,7 +15,8 @@ export default class Info extends Component {
 
         <label><p>Email:</p> 
           <input name="email" type="email" value={states.email}
-          maxLength="50" onChange={handleClick} required />
+          maxLength="50" onChange={handleClick} required
+          pattern="[\w._]{6,30}@[a-z]{5,10}\.com(.br)?" />
         </label>
 
         <label><p>CPF:</p> 
