@@ -8,7 +8,7 @@ export default class Form extends Component {
     this.handleClick = this.handleClick.bind(this)
     this.clearState = this.clearState.bind(this)
 
-    const stateDefault = {
+    this.state = {
       name: '',
       email: '',
       cpf: '',
@@ -18,21 +18,45 @@ export default class Form extends Component {
       type: '',
       resume: '',
       position: '',
+      showAlert: false,
       description: ''
     }
 
-    this.state = stateDefault;
-
   }
 
-  handleClick({ target }) {
+  handleClick({ target, type }) {
     const { name } = target;
 
-    const value =
+    let value =
     (target.type === 'checkbox')
     ? target.checkbox
     : target.value;
 
+    switch (name) {
+      case 'name':
+        value = value.toUpperCase()
+        break;
+
+      case 'address':
+        value = value.replace(/[^çãõéàê\w\s,.!?"'=:/$%@+\-()]/g, '');
+        break;
+
+      case 'city':
+        if (type === 'blur') {
+          value = value.replace(/\d.+/, '')
+        }
+        break;
+
+      case 'position':
+        if (type === 'mouseenter' && !this.state.showAlert) {
+          alert('Preencha com cuidado esta informação.')
+          this.setState({ showAlert: true })
+        }
+        break;
+    
+      default:
+        break;
+    }
 
     this.setState({ [name]: value });
   }
