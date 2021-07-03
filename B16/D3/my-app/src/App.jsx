@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 export default class App extends Component {
   render() {
@@ -15,10 +16,8 @@ export default class App extends Component {
           <Route exact path="/" component={ Home } />
           <Route path="/login" component={ Login } />
           <Route path="/logged" />
-          <Route path="/register" />
-          <Route>
-            <h1>Not Found</h1>
-          </Route>
+          <Route path="/register" component={ Register } />
+          <Route component={ () => <h1>Not Found!</h1> } />
         </Switch>
       </BrowserRouter>
     )

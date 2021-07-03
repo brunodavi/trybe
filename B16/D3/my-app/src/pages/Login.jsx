@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../components/Input';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
   render() {
@@ -18,6 +19,9 @@ export default class Login extends Component {
           regex={/^\w{8,64}$/}
         />
         <input type="submit" id="disabled" disabled />
+        <p>
+          <Link to="/register" >Criar nova conta</Link>
+        </p>
       </form>
     );
   }
