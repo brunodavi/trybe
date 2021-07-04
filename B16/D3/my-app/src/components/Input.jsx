@@ -10,10 +10,14 @@ class Input extends Component {
       wrong: '',
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
-  handleChange({ target }) {
+  componentDidMount() {
+    document.querySelector('#disabled').disabled = true
+  }
+
+  handleBlur({ target }) {
     const { regex, message } = this.props;
     const { value } = target;
 
@@ -43,7 +47,7 @@ class Input extends Component {
   }
 
   render() {
-    const { label, type } = this.props;
+    const { label, type, handleChange } = this.props;
     const { wrong } = this.state;
     const ID = this.genId();
     return (
@@ -51,7 +55,8 @@ class Input extends Component {
         <label htmlFor={ ID } className="Label">
           {label}
           <input
-            onBlur={this.handleChange}
+            onChange={ ({ target: { value } }) => handleChange(value) }
+            onBlur={this.handleBlur}
             className="Input"
             type={type}
             id={ ID }
@@ -64,6 +69,7 @@ class Input extends Component {
 }
 
 Input.propTypes = {
+  handleChange: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,

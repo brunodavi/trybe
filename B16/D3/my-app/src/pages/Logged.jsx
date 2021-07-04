@@ -4,7 +4,7 @@ export default class Logged extends Component {
   render() {
     return (
       <div>
-        
+        Logged
       </div>
     )
   }

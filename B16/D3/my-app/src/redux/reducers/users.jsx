@@ -1,14 +1,14 @@
 const initialState = []
 
-const USER = 'USER'
+const ADD = 'ADD'
 
-function addUser(state = initialState, {type, user}) {
+function users(state = initialState, {type, user}) {
   switch (type) {
-    case USER:
+    case ADD:
       return [...state, user]
     default:
       return state;
   }
 }
 
-export default addUser;
+export default users;
