@@ -1,1 +1,1 @@
-> JavaScript
+> Iniciando desenvolvimento de scripts.js
