@@ -1,0 +1,28 @@
+div.d1, div.d3, div.d5 h3 {
+  font-style: italic;
+}
+
+div:hover {
+  border: black solid 1px;
+}
+
+.d1 {
+  background-color: rgb(250, 0, 0);
+}
+
+.d2 {
+  background-color: rgb(200, 0, 0);
+}
+
+.d3 {
+  background-color: rgb(150, 0, 0);
+  font-size: x-large;
+}
+
+.d4 {
+  background-color: rgb(75, 0, 0);
+}
+
+.d5 {
+  background-color: rgb(255, 100, 100);
+}
