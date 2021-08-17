@@ -30,8 +30,8 @@
   - [x] Metodologias Ágeis
   - [x] Testes automatizados com React Testing Library
   - [x] Gerenciamento de estado com Redux
-  - [ ] Projeto Jogo de Trivia
-  - [ ] Context API e React Hooks
+  - [x] Projeto Jogo de Trivia
+  - [x] Context API e React Hooks
   - [ ] Projeto App de Receitas
 
 </details>
