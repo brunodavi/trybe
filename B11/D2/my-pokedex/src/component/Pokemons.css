@@ -1,0 +1,49 @@
+h3 {
+  text-align: center;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: solid rgba(0, 0, 0, 0.3) 1px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 150px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button {
+  margin: 5px;
+  background-color: orangered;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  border: none;
+}
