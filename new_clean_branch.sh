@@ -15,7 +15,6 @@ then
   git checkout master -- "$1/"
   git commit -m "Branch $1"
   git push -u origin "$1"
-  git checkout master
 else
   echo 'Essa branch já existe'
 fi

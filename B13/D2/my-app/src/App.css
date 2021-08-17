@@ -1,9 +1,0 @@
-nav {
-  display: flex;
-  justify-content: space-around;
-  border: black solid 1px;
-}
-
-nav * {
-  margin: 10px;
-}
