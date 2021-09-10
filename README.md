@@ -32,7 +32,7 @@
   - [x] Gerenciamento de estado com Redux
   - [x] Projeto Jogo de Trivia
   - [x] Context API e React Hooks
-  - [ ] Projeto App de Receitas
+  - [x] Projeto App de Receitas
 
 </details>
 
@@ -42,7 +42,7 @@
     <b> Back-End </b>
    </summary>
 
-  - [ ] SQL
+  - [x] SQL
   - [ ] Funções SQL, Joins e Subqueries
   - [ ] Normalização e Modelagem de Banco de Dados
   - [ ] MongoDB
