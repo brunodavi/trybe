@@ -1,1 +1,0 @@
-> Unix, Bash & Shell

@@ -1,7 +1,0 @@
-amarelo
-vermelho
-azul
-
-roxo
-rosa
-verde
