@@ -43,7 +43,7 @@
    </summary>
 
   - [x] SQL
-  - [ ] Funções SQL, Joins e Subqueries
+  - [x] Funções SQL, Joins e Subqueries
   - [ ] Normalização e Modelagem de Banco de Dados
   - [ ] MongoDB
   - [ ] MongoDB: Updates Simples e Complexos
