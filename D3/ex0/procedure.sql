@@ -129,3 +129,23 @@ CALL filmCategory('Comedy');
 
 -- Monte uma procedure que receba o email de um cliente como parâmetro de entrada e diga se o cliente está ou 
 -- não ativo, através de um parâmetro de saída.
+DELIMITER $$
+
+CREATE PROCEDURE emailActive(IN user_email VARCHAR(100), OUT email_active VARCHAR(3))
+
+BEGIN
+
+SELECT 
+    IF(active, 'Sim', 'Não')
+FROM
+    sakila.customer
+WHERE
+    email = user_email
+INTO email_active;
+
+END $$
+
+DELIMITER ;
+
+call emailActive('SANDRA.MARTIN@sakilacustomer.org', @email_active);
+select @email_active;
