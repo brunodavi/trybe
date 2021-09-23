@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS Zoo;
+
+CREATE TABLE Gerente(
+    GerenteId INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Cuidador (
+    CuidadorId INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(100) NOT NULL,
+    GerenteId INT NOT NULL,
+    FOREIGN KEY (GerenteId)
+        REFERENCES Gerente (GerenteId)
+);
+
+CREATE TABLE Animais (
+    AnimaisId INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(100) NOT NULL,
+	Especie VARCHAR(100) NOT NULL,
+    Sexo VARCHAR(20) NOT NULL,
+    Idade INT NOT NULL,
+    Localizacao VARCHAR(100) NOT NULL,
+    CuidadorId INT NOT NULL,
+    FOREIGN KEY (CuidadorId)
+        REFERENCES Cuidador (CuidadorId)
+);
