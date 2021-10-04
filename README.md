@@ -45,7 +45,7 @@
   - [x] SQL
   - [x] Funções SQL, Joins e Subqueries
   - [x] Normalização e Modelagem de Banco de Dados
-  - [ ] MongoDB
+  - [x] MongoDB
   - [ ] MongoDB: Updates Simples e Complexos
   - [ ] MongoDB: Aggregation Framework
   - [ ] Desenvolvimento Web com NodeJS
