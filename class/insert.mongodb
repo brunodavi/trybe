@@ -1,0 +1,24 @@
+/*
+use('nomeDoBanco');
+db.nomeDaColecao.insertOne( { x: 1 });
+
+db.nomeDaColecao1.insertOne({ x: 1 });
+db.nomeDaColecao2.createIndex({ y: 1 });
+db.createCollection( "nomeDaColecao", { collation: { locale: "pt" } } );
+*/
+
+
+/* Agora, crie um documento na coleção products, no banco de dados sample,
+com os seguintes atributos e valores: */
+
+use('simple');
+db.products.insertOne({
+  "productName": "Caixa",
+  "price": 20,
+});
+
+db.products.insertMany([
+  { "productName": "Lapis", "stock": 10, "price": 20,"status":"A"},
+  { "productName": "Tesoura", "price": 5, "status": "B" },
+  { "productName": "Borracha", "price": 15, "status": "A" }
+]);

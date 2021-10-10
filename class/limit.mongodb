@@ -1,0 +1,4 @@
+use('simple');
+
+// Mostra todos os resultados limitando em 5 resultados
+db.bios.find().limit(5);

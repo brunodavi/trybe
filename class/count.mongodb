@@ -1,0 +1,2 @@
+use('simple');
+db.movies.count();

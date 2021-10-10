@@ -1,0 +1,29 @@
+use('simple');
+
+// Busca o primeiro resultado com o 'title' "Forrest Gump"
+// e mostra apenas title, imdb_rating com o _id
+db.movies.findOne(
+  { "title" : "Forrest Gump" },
+  { "title" : 1, "imdb_rating" : 1 }
+);
+
+// Busca o primeiro resultado com o 'title' "Forrest Gump"
+// e mostra apenas title, imdb_rating e retira o _id
+// que aparece por padrão
+db.movies.findOne(
+  { "title" : "Forrest Gump" },
+  { "title" : 1, "imdb_rating" : 1, "_id": 0 }
+);
+
+// Mostra todos os documentos
+db.bios.find();
+
+// ! Execute bios.mongodb antes
+db.bios.find( { _id: 5 } );
+
+// ? Busca { "name": { "last": "Hopper" } }
+db.bios.find( { "name.last": "Hopper" } );
+
+// ? Busca por todos os documentos mostrando apenas o { name }
+db.bios.find({}, { name: 1 });
+
