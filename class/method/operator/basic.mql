@@ -1,0 +1,118 @@
+use("simple");
+db.restaurants.find();
+
+// [ Comparadores ]
+
+// pageCount é menor que 300
+db.books.find({ pageCount: { $lt: 265 } });
+
+// pageCount é menor ou igual á 300
+db.books.find({ pageCount: { $lte: 265 } });
+
+
+// pageCount é maior que 400
+db.books.find({ pageCount: { $gt: 416 } });
+
+// pageCount é maior ou igual á 416
+db.books.find({ pageCount: { $gte: 416 } });
+
+
+// status é igual á PUBLISH
+db.books.find({ status: "PUBLISH" });
+db.books.find({ status: { $eq: "PUBLISH" } });
+
+
+// status não é igual á PUBLISH
+db.books.find({ status: { $ne: "PUBLISH" } });
+
+
+// pageCount contém 265 ou 416
+db.books.find({ pageCount: { $in: [265, 416] } });
+
+// pageCount não contém 265 ou 416
+db.books.find({ pageCount: { $nin: [265, 416] } });
+
+
+// [ Lógicos ]
+
+// pageCount não é maior que 265
+db.books.find({ pageCount: { $not: { $gt: 265 } } });
+
+// pageCount é maior que 265 ou status é "PUBLISH"
+db.books.find({ $or: [{ pageCount: { $gt: 265 } }, { status: "PUBLISH" }] });
+
+// pageCount não é maior que 265 ou status não é "PUBLISH"
+db.books.find({ $nor: [{ pageCount: { $gt: 265 } }, { status: "PUBLISH" }] });
+
+// pageCount é maior que 265 e status é "PUBLISH"
+db.books.find({ $and: [{ pageCount: { $gt: 265 } }, { status: "PUBLISH" }] });
+
+// status é "PUBLISH" e pageCount é menor que 300 ou maior que 0
+db.books.find({ $and: [
+  { status: "PUBLISH" },
+  {
+    $or: [
+      { pageCount: 265 },
+      { pageCount: 416 }
+    ]
+  }
+] });
+
+
+// [ Exists ]
+db.books.find({ longDescription: { $exists: true } });
+
+
+// [ Exercicios ]
+
+// Selecione e faça a contagem dos restaurantes presentes nos bairros Queens, Staten Island e Bronx.
+// (utilizando o atributo borough)
+db.restaurants.count({ borough: { $in: ["Queens", "Staten Island", "Bronx"] } });
+
+// Selecione e faça a contagem dos restaurantes que não possuem culinária do tipo American.
+// (utilizando o atributo cuisine)
+db.restaurants.count({ cuisine: { $ne: "American" } });
+
+// Selecione e faça a contagem dos restaurantes que possuem avaliação maior ou igual a 8.
+// (utilizando o atributo rating)
+db.restaurants.count({ rating: { $gte: 8 } });
+
+// Selecione e faça a contagem dos restaurantes que possuem avaliação menor que 4.
+db.restaurants.count({ rating: { $lt: 4 } });
+
+// Selecione e faça a contagem dos restaurantes que não possuem as avaliações 5, 6 e 7.
+db.restaurants.count({ rating: { $nin: [5, 6, 7] } });
+
+
+// Selecione e faça a contagem dos restaurantes que não possuem avaliação menor ou igual a 5,
+// essa consulta também deve retornar restaurantes que não possuem o campo avaliação.
+db.restaurants.count( $or: [{ rating: { $lte: 5 } }, { rating: { $exists: false } }]);
+
+// Selecione e faça a contagem dos restaurantes em que a avaliação seja maior ou igual a 6,
+// ou restaurantes localizados no bairro Brooklyn.
+db.restaurants.count({ $or: [{ rating: { $gte: 6 } }, { borough: "Brooklyn" }] });
+
+// Selecione e faça a contagem dos restaurantes localizados nos bairros Queens,
+// Staten Island e Brooklyn e possuem avaliação maior que 4.
+db.restaurants.count({ $and: [{borough: { $in: ["Queens", "Staten Island", "Brooklyn"] }}, {rating: { $gt: 4 }}] });
+
+// Selecione e faça a contagem dos restaurantes onde nem o campo avaliação seja igual a 1,
+// nem o campo culinária seja do tipo American.
+db.restaurants.count({ $nor: [{ rating: 1 }, { cuisine: "American" }] });
+
+// Selecione e faça a contagem dos restaurantes em que a avaliação seja maior que 6 ou menor que 10.
+// E esteja localizado no bairro Brooklyn OU não possuem culinária do tipo Delicatessen.
+db.restaurants.count({ $and: [
+  {
+    $or: [
+      { rating: { $gt: 6 } },
+      { rating: { $lt: 10 } }
+    ]
+  },
+  {
+    $or: [
+      { borough: "Brooklyn" },
+      { cuisine: { $ne: "Delicatessen" }}
+    ]
+  }
+] });

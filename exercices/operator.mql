@@ -1,0 +1,61 @@
+use("simple");
+
+// Inspecione um documento para que você se familiarize com a estrutura.
+// Entenda os atributos e os níveis existentes.
+db.superheroes.findOne();
+
+// {
+//   "_id": {
+//     "$oid": "616c8d17b4c5039038d051c0"
+//   },
+//   "name": "Abomination",
+//   "alignment": "bad",
+//   "gender": "Male",
+//   "race": "Human / Radiation",
+//   "aspects": {
+//     "eyeColor": "green",
+//     "hairColor": "No Hair",
+//     "height": 203,
+//     "weight": 200
+//   },
+//   "publisher": "Marvel Comics"
+// }
+
+
+// Selecione todos os super-heróis com menos de 1.80m de altura.
+// Lembre-se de que essa informação está em centímetros.
+
+// Retorne o total de super-heróis menores que 1.80m.
+
+// Retorne o total de super-heróis com até 1.80m.
+
+// Selecione um super-herói com 2.00m ou mais de altura.
+
+// Retorne o total de super-heróis com 2.00m ou mais.
+
+// Selecione todos os super-heróis que têm olhos verdes.
+
+// Retorne o total de super-heróis com olhos azuis.
+
+// Utilizando o operador $in, selecione todos os super-heróis com cabelos pretos ou carecas ( "No Hair" ).
+
+// Retorne o total de super-heróis com cabelos pretos ou carecas ( "No Hair" ).
+
+// Retorne o total de super-heróis que não tenham cabelos pretos ou não sejam carecas.
+
+// Utilizando o operador $not, retorne o total de super-heróis que não tenham mais de 1.80m de altura.
+
+// Selecione todos os super-heróis que não sejam humanos nem sejam maiores do que 1.80m.
+
+// Selecione todos os super-heróis com 1.80m ou 2.00m de altura e que sejam publicados pela Marvel Comics.
+
+// Selecione todos os super-heróis que pesem entre 80kg e 100kg,
+// sejam Humanos ou Mutantes e não sejam publicados pela DC Comics.
+
+// Retorne o total de documentos que não contêm o campo race.
+
+// Retorne o total de documentos que contêm o campo hairColor.
+
+// Remova apenas um documento publicado pela Sony Pictures.
+
+// Remova todos os documentos publicados pelo George Lucas.

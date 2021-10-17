@@ -1,0 +1,7 @@
+use("simple");
+
+// Sorteando pelo título em ordem alfabética
+db.books.find().sort({ title: 1 });
+
+// Sorteando pela quantidade de páginas em ordem decrescente
+db.books.find().sort({ pageCount: -1 });
