@@ -46,7 +46,7 @@
   - [x] Funções SQL, Joins e Subqueries
   - [x] Normalização e Modelagem de Banco de Dados
   - [x] MongoDB
-  - [ ] MongoDB: Updates Simples e Complexos
+  - [x] MongoDB: Updates Simples e Complexos
   - [ ] MongoDB: Aggregation Framework
   - [ ] Desenvolvimento Web com NodeJS
   - [ ] NodeJS: Camada de Serviço e Arquitetura Rest e Restful
