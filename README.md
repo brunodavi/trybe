@@ -47,9 +47,9 @@
   - [x] Normalização e Modelagem de Banco de Dados
   - [x] MongoDB
   - [x] MongoDB: Updates Simples e Complexos
-  - [ ] MongoDB: Aggregation Framework
-  - [ ] Desenvolvimento Web com NodeJS
-  - [ ] NodeJS: Camada de Serviço e Arquitetura Rest e Restful
+  - [x] MongoDB: Aggregation Framework
+  - [x] Desenvolvimento Web com NodeJS
+  - [x] NodeJS: Camada de Serviço e Arquitetura Rest e Restful
   - [ ] Autenticação e Upload de Arquivos
   - [ ] Deployment
   - [ ] Projeto Trybeer
