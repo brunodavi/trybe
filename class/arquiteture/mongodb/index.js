@@ -151,8 +151,6 @@ app.put('/user/:id', validateUser, async (req, res) => {
   const { id } = req.params;
   const userUpdate = await User.update(id, req.body);
 
-  console.log(id, userUpdate);
-
   if (!userUpdate) {
     return res.status(404).json({
       error: true,
