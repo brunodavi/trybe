@@ -1,13 +1,16 @@
 const express = require('express');
-const error = require('./middleware/error');
-const PORT = 3000;
+const bodyParser = require('body-parser');
+
+const MovieController = require('./controllers/movieController');
 
 const app = express();
 
-app.use(express.json());
+app.use(bodyParser.json());
 
-app.use(require('./controller/root'));
+app.post('/movie', MovieController.create);
 
-app.use(error);
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Ouvindo a porta ${PORT}`);
+});
