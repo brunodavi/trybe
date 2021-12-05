@@ -50,7 +50,7 @@
   - [x] MongoDB: Aggregation Framework
   - [x] Desenvolvimento Web com NodeJS
   - [x] NodeJS: Camada de Serviço e Arquitetura Rest e Restful
-  - [ ] Autenticação e Upload de Arquivos
+  - [x] Autenticação e Upload de Arquivos
   - [ ] Deployment
   - [ ] Projeto Trybeer
   - [ ] Arquitetura: SOLID e ORM
