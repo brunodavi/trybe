@@ -1,0 +1,9 @@
+apps:
+
+  - name: app
+    script: ./index.js
+    env_prod:
+      ENVIRONMENT: PRODUCTION
+    env_homolog:
+      ENVIRONMENT: HOMOLOG
+      PORT: 3001

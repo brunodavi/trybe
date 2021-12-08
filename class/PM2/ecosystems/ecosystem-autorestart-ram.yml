@@ -1,0 +1,4 @@
+apps:
+  - name: app
+    script: ./index.js
+    max_memory_restart: 42M

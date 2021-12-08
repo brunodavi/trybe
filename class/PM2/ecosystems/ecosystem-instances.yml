@@ -1,0 +1,10 @@
+apps:
+
+  - name: app-1
+    script: ./index.js
+  - name: app-2
+    script: ./index.js
+  - name: app-3
+    script: ./index.js
+  - name: app-4
+    script: ./index.js
