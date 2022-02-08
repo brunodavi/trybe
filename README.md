@@ -51,11 +51,11 @@
   - [x] Desenvolvimento Web com NodeJS
   - [x] NodeJS: Camada de Serviço e Arquitetura Rest e Restful
   - [x] Autenticação e Upload de Arquivos
-  - [ ] Deployment
-  - [ ] Projeto Trybeer
-  - [ ] Arquitetura: SOLID e ORM
-  - [ ] Sockets
-  - [ ] Projeto Trybeer II
+  - [x] Deployment
+  - [x] Projeto Trybeer
+  - [x] Arquitetura: SOLID e ORM
+  - [x] Sockets
+  - [x] Projeto Trybeer II
 
 </details>
 
